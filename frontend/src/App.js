@@ -18,7 +18,7 @@ function App() {
     const reponse = await api.checkBackendHealth().then(payload => {
       setBackendStatus(payload.data)
     }).catch(err => {
-      console.err('err >>', err.response.data)
+      console.error('err >>', err.response.data)
       setBackendStatus(null)
     })
   }, [])
@@ -30,7 +30,7 @@ function App() {
       setTranscipt(payload.data)
       setLoading(false)
     }).catch(err => {
-      console.err('err >>', err.response.data)
+      console.error('err >>', err.response.data)
     })
   }, [])
 
